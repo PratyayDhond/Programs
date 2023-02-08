@@ -1,0 +1,54 @@
+class Animal:
+    def __init__(self, name, sound):
+        self.__name = name
+        self.__sound = sound
+
+    def getName(self):
+        return self.__name
+
+    def get_sound(self):
+        return self.__sound
+
+    def makeSound(self):
+        print(self.__name , self.__sound + "s" )
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__(name, "bark")
+
+class Cat(Animal):
+    def __init__(self, name):
+        super().__init__(name, "meow")
+
+class Elephant(Animal):
+    def __init__(self, name):
+        super().__init__(name, "trumpet")
+
+class Fish(Animal):
+    def __init__(self, name):
+        super().__init__(name, "glub glub")
+
+class Lion(Animal):
+    def __init__(self, name):
+        super().__init__(name, "Roar")
+
+dog = Dog("Tyson")
+cat = Cat("Persy")
+elephant = Elephant("Blue the Elephent")
+fish = Fish("Goldy the fish")
+lion = Lion("King the Lion")
+
+print(dog.getName())
+dog.makeSound()
+
+print(cat.getName())
+cat.makeSound()
+
+print(elephant.getName())
+elephant.makeSound()
+
+print(fish.getName())
+fish.makeSound()
+
+print(lion.getName())
+lion.makeSound()
