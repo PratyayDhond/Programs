@@ -1,0 +1,44 @@
+class Mammal:
+    def __init__(self, species, sound):
+        self.__species = species
+        self.__sound = sound
+
+    def make_sound(self):
+        return self.__sound
+
+    def get_species(self):
+        return self.__species
+
+class Pig(Mammal):
+    def __init__(self):
+        Mammal.__init__(self, "Pig", "Oink")
+
+class Dog(Mammal):
+    def __init__(self):
+        Mammal.__init__(self, "Dog", "Bark")
+
+class Cat(Mammal):
+    def __init__(self):
+        Mammal.__init__(self, "Cat", "Meow")
+
+class Man(Mammal):
+    def __init__(self):
+        Mammal.__init__(self, "Man", "Speak")
+
+class Hybrid(Pig, Dog):
+    def __init__(self):
+        Pig.__init__(self)
+        Dog.__init__(self)
+
+def make_sound(animal):
+    print(animal.make_sound())
+
+pig = Pig()
+dog = Dog()
+cat = Cat()
+man = Man()
+hybrid = Hybrid()
+
+animals = [pig, dog, cat, man, hybrid]
+for animal in animals:
+    make_sound(animal)

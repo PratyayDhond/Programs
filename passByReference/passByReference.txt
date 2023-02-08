@@ -1,0 +1,17 @@
+#include <iostream>
+
+void subtract(int &a, int &b, int &result) {
+    result = a - b;
+}
+
+int main() {
+    int a = 10;
+    int b = 5;
+    int result;
+
+    subtract(a, b, result);
+
+    std::cout << "Result: " << result << std::endl;
+
+    return 0;
+}
