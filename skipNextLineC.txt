@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+void skip_next_line() {
+    goto end;
+}
+
+int main() {
+    skip_next_line();
+    printf("This line will be skipped\n");
+    end:
+    printf("Program will proceed ahead\n");
+    return 0;
+}

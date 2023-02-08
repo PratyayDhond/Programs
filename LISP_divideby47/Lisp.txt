@@ -1,0 +1,8 @@
+(defun is-divisible-by-2 (n)
+  (if (zerop (mod n 2))
+      t
+      nil))
+
+(setf n 47)
+
+(format t "~a is divisible by 2: ~a~%" n (is-divisible-by-2 n))
