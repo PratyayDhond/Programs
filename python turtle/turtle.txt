@@ -1,0 +1,31 @@
+import turtle
+
+def draw_square(turtle, size):
+    for i in range(4):
+        turtle.forward(size)
+        turtle.right(90)
+        
+def draw_triangle(turtle, size):
+    for i in range(3):
+        turtle.forward(size)
+        turtle.right(120)
+
+def draw_circle(turtle, size):
+    turtle.circle(size)
+
+def draw_shapes():
+    window = turtle.Screen()
+    window.bgcolor("white")
+
+    brad = turtle.Turtle()
+    brad.shape("turtle")
+    brad.color("red")
+    brad.speed(2)
+
+    draw_square(brad, 100)
+    draw_triangle(brad, 100)
+    draw_circle(brad, 50)
+
+    window.exitonclick()
+
+draw_shapes()
