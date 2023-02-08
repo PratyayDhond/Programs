@@ -1,0 +1,7 @@
+string1 = MyString("Hello")
+string2 = MyString(" World")
+string3 = string1 + string2
+print(string3)
+print(len(string3))
+print(string3.find("Wor"))
+print(string3.replace("Hello", "Hi"))

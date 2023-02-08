@@ -1,0 +1,18 @@
+class MyString:
+    def __init__(self, string):
+        self.string = string
+
+    def __repr__(self):
+        return self.string
+
+    def __add__(self, other):
+        return MyString(self.string + other.string)
+
+    def __len__(self):
+        return len(self.string)
+
+    def find(self, sub_string):
+        return self.string.find(sub_string)
+
+    def replace(self, old_string, new_string):
+        return MyString(self.string.replace(old_string, new_string))
