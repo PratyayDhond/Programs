@@ -1,0 +1,14 @@
+%Design an efficient model to check the path between two nodes in a given graph using prolog.You can write your own relations
+
+% Define the relation edge(X, Y) which represents an edge between node X and node Y.
+edge(a, b).
+edge(a, c).
+edge(b, c).
+edge(c, d).
+
+% Define the relation path(X, Y, Path) which returns the path from node X to node Y.
+path(X, Y, [X, Y]) :- edge(X, Y).
+path(X, Y, [X | Path]) :- edge(X, Z), path(Z, Y, Path).
+
+% Check if a path exists between node A and node B.
+path_exists(A, B) :- path(A, B, _).
