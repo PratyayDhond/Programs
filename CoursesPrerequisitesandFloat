@@ -1,0 +1,37 @@
+% Define the courses and the teachers who are floating them
+course(course1, teacher1, department1).
+course(course2, teacher2, department2).
+course(course3, teacher3, department3).
+course(course4, teacher4, department1).
+course(course5, teacher5, department2).
+
+% Define the students and their enrolled courses
+student(student1, [course1, course2, course3]).
+student(student2, [course2, course4]).
+student(student3, [course3, course5]).
+student(student4, [course1, course5]).
+
+% Define the prerequisites for a course
+prerequisite(course2, course1).
+prerequisite(course3, course2).
+prerequisite(course5, course4).
+
+% Define a rule to check if a student has cleared the prerequisites for a course
+has_cleared_prerequisites(Student, Course) :-
+  student(Student, EnrolledCourses),
+  prerequisite(Course, Prereq),
+  member(Prereq, EnrolledCourses).
+
+% Define a rule to check if a student is eligible to enroll for a course
+is_eligible(Student, Course) :-
+  student(Student, EnrolledCourses),
+  length(EnrolledCourses, NumCourses),
+  NumCourses < 5,
+  has_cleared_prerequisites(Student, Course).
+
+% Define a rule to check if a teacher is eligible to float a course
+is_teacher_eligible(Teacher, Course) :-
+  course(Course, Teacher, _),
+  findall(C, course(C, Teacher, _), List),
+  length(List, NumCourses),
+  NumCourses < 2.
