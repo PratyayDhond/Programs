@@ -1,0 +1,13 @@
+from tkinter import Label, Button
+import tkinter as tk
+window = tk.Tk()
+greeting = tk.Label(text="Hello World!")
+greeting.pack()
+root = tk()
+#widget = Label(None, text="Hello World!")
+#widget.pack()
+#a1 = Label(None, text="PPL")
+#a1.pack()
+but = Button(root, text="OK")
+but.pack()
+window.mainloop()
