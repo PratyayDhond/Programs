@@ -1,0 +1,35 @@
+
+#python shapes oop
+import math
+class shapes:
+    def _init_(self):
+        pass
+    def area(self):
+        pass
+    def perimeter(self):
+        pass
+class Circle(shapes):
+    def _init_(self,radius):
+        self.radius=radius
+    def a
+        return math.pi*(self.radius**2)
+    def perimeter(self):
+        return math.pi*2*self.radius
+class Square(shapes):
+    def _init_(self,length):
+        self.length=length
+    def Area(self):
+        return self.length**2
+    def perimeter(self):
+        return self.length*4
+class Triangle(shapes):
+    def _
+        self.a=a
+        self.b=b
+        self.c=c
+
+    def Area(self):
+        s=(self.a+self.b+self.c)/2
+        return math.sqrt(s*(s-self.a)(s-self.b)(s-self.c))
+    def perimeter(self):
+        return self.a+self.b+self.c_init__(self,a,b,c):rea(self):

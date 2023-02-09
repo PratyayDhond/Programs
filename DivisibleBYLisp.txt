@@ -1,0 +1,6 @@
+(defun divisible-by-2 (number)
+  (if (= (mod number 2) 0)
+      (print (format nil "~a is divisible by 2" number))
+      (print (format nil "~a is not divisible by 2" number))
+    )
+)
