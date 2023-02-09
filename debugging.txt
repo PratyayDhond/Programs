@@ -1,0 +1,11 @@
+vi hello.c
+gcc -g hello.c
+gdb a.out
+run
+list
+diassemble main
+break * main
+info registers
+ni
+ni 
+...
